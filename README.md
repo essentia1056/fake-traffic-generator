@@ -2,6 +2,10 @@
 
 A serverless system on AWS that simulates privacy-focused web traffic on a schedule, logs each session to S3, and provides monitoring and cost controls.
 
+![Architecture Diagram](architecture.png)
+
+_This diagram illustrates the architecture: Lambda is triggered by EventBridge on a fixed schedule, sends fake HTTP requests, and logs results to S3. CloudWatch monitors function activity and an optional Budget Alarm helps control costs._
+
 ## Prerequisites
 
 * AWS CLI configured with appropriate permissions
